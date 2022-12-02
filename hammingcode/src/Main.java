@@ -3,6 +3,7 @@ public class Main {
         Writer escritor = new Writer();
         Sender mensajero = new Sender();
         Noise ruido = new Noise();
+        Receiver receptor = new Receiver();
 
         int[] mensaje = escritor.generarMensaje();
 
@@ -39,6 +40,8 @@ public class Main {
             System.out.print(mensaje[i]);
 
         }
+
+        receptor.detectarErroresConHamming(mensaje);
         
     }
 }
